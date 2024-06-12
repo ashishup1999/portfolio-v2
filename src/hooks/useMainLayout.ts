@@ -15,7 +15,7 @@ const useMainLayout = () => {
     document.addEventListener("click", (e: any) => {
       if (e?.target?.id !== "menu-logo") {
         const ele = document.getElementById("right-pannel");
-        if (ele) ele.style.zIndex = "-1";
+        if (ele) ele.style.zIndex = "0";
       }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -35,7 +35,7 @@ const useMainLayout = () => {
     const ele = document.getElementById("right-pannel");
     if (ele) {
       if (Number(ele?.style?.zIndex) <= 0) ele.style.zIndex = "2";
-      else ele.style.zIndex = "-1";
+      else ele.style.zIndex = "0";
     }
   };
 
