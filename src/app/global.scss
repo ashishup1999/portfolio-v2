@@ -1,0 +1,96 @@
+@import "src/app/globalValues";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  color: white;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  p,
+  h1 {
+    text-align: justify;
+  }
+}
+
+body {
+  background-color: $black;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+#main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#right-pannel {
+  display: flex;
+  flex: 0.15;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  #logo {
+    margin: 10px;
+    height: auto;
+    width: 60px;
+  }
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+    li {
+      cursor: pointer;
+      a {
+        text-decoration: none;
+      }
+    }
+    li.checked > a,
+    li > a:hover {
+      text-decoration: underline;
+    }
+    #resume {
+      display: flex;
+      align-items: center;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 7px;
+      gap: 5px;
+      img {
+        height: 12px;
+      }
+    }
+  }
+  #socials {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 12px;
+    li {
+      cursor: pointer;
+      img {
+        height: 25px;
+      }
+    }
+  }
+}
+
+#content-pannel {
+  display: flex;
+  flex: 0.85;
+  height: 100%;
+  background-image: url("../../public/LampBG.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 0 15%;
+  padding-top: 30vh;
+}
