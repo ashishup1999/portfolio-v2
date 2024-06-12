@@ -5,7 +5,6 @@ import Image from "next/image";
 import arrowLeft from "@/assets/arrowLeft.svg";
 import arrowRight from "@/assets/arrowRight.svg";
 import { WORKS } from "@/constants/Common";
-import Link from "next/link";
 
 const Works = () => {
   const [wno, setWno] = useState(0);
@@ -29,32 +28,32 @@ const Works = () => {
             <span className="work-head">
               <p className="work-title">{WORKS[wno]?.name}</p>
               {WORKS[wno]?.open && (
-                <Link className="demo" href={WORKS[wno]?.open} target="_blank">
+                <a className="demo" href={WORKS[wno]?.open} target="_blank">
                   Demo
-                </Link>
+                </a>
               )}
               {WORKS[wno]?.ui && (
                 <>
                   <p> | </p>
-                  <Link
+                  <a
                     className="ui-code"
                     href={WORKS[wno]?.ui}
                     target="_blank"
                   >
                     Code-FE
-                  </Link>
+                  </a>
                 </>
               )}
               {WORKS[wno]?.server && (
                 <>
                   <p> | </p>
-                  <Link
+                  <a
                     className="server-code"
                     href={WORKS[wno]?.server}
                     target="_blank"
                   >
                     Code-BE
-                  </Link>
+                  </a>
                 </>
               )}
             </span>
