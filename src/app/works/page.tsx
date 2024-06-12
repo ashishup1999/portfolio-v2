@@ -5,6 +5,7 @@ import Image from "next/image";
 import arrowLeft from "@/assets/arrowLeft.svg";
 import arrowRight from "@/assets/arrowRight.svg";
 import { WORKS } from "@/constants/Common";
+import Link from "next/link";
 
 const Works = () => {
   const [wno, setWno] = useState(0);
