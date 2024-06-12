@@ -19,6 +19,12 @@ import goIcon from "@/assets/skills/go.svg";
 import cpp from "@/assets/skills/cpp.svg";
 import aws from "@/assets/skills/aws.svg";
 import dj from "@/assets/skills/django.svg";
+import codekarImg from "@/assets/work-images/codeKar.png";
+import samvadImg from "@/assets/work-images/samvad.png";
+import fdImg from "@/assets/work-images/fm.png";
+import nlpImg from "@/assets/work-images/nlp.png";
+import nstImg from "@/assets/work-images/nst.png";
+import { StaticImageData } from "next/image";
 
 export const ABOUT = {
   name: "ASHISH UPADHYAY",
@@ -73,4 +79,56 @@ export const SKILLS_NAMES: { [key: string]: string } = {
   cpp: "C++",
   aws: "AWS",
   dj: "Django",
+};
+
+export const WORKS: {
+  [key: string]: {
+    id: string;
+    img: StaticImageData;
+    name: string;
+    open: string;
+    ui?: string;
+    server?: string;
+    desc: string;
+  };
+} = {
+  codekar: {
+    id: "codekar",
+    img: codekarImg,
+    name: "<CodeKar>",
+    open: "https://codekar-one.vercel.app/",
+    ui: "https://github.com/ashishup1999/codekar",
+    server: "https://github.com/ashishup1999/codekar-server",
+    desc: "An authentication-based platform enabling users to create mini projects using HTML, CSS, and JavaScript. Provides code-editor playgrounds supporting 5 languages that are Java, Python, Go, C++, and Js. Introducing a unique whiteboard-like code-editor mode devoid of common editor features such as auto-suggestion, auto-completion, and auto-indentation to help users grasp a deeper understanding of language’s features. Facilitates exploration of other user’s playgrounds with the option to connect and collaborate. Used a Go based server as Go can handle as many as 1000 concurrent requests per second, making the app faster",
+  },
+  samvad: {
+    id: "samvad",
+    img: samvadImg,
+    name: "<Samvad>",
+    open: "https://samvad-client-img-latest.onrender.com/",
+    ui: "https://github.com/ashishup1999/samvad-client",
+    server: "https://github.com/ashishup1999/samvad-server",
+    desc: "Samvad is a web-based, responsive application designed for real-time chatting with friends. This project highlights the effective use of web sockets for seamless real-time communication. The user interface offers a smooth experience, allowing users to easily log in and initiate conversations with their loved ones.",
+  },
+  fmd: {
+    id: "fmd",
+    img: fdImg,
+    name: "<Face Mask Detector>",
+    open: "https://github.com/ashishup1999/Face-Mask-Detector-for-COVID-pandemic",
+    desc: "I have created a system capable of identifying whether a person is wearing a mask using live camera input. To achieve this, I utilized the facenet-pytorch and MobileNetV3 neural networks to construct the system.",
+  },
+  nlp: {
+    id: "nlp",
+    img: nlpImg,
+    name: "<Twitter Sentiment Analysis>",
+    open: "https://github.com/ashishup1999/NLP-on-twitter-sentiments",
+    desc: "I developed an algorithm capable of determining whether a sentence expresses support for or opposition to the concept of global warming. The dataset used for this task was collected from tweets posted by various Twitter users discussing the topic of global warming.",
+  },
+  nst: {
+    id: "nst",
+    img: nstImg,
+    name: "<Neural Style Transfer>",
+    open: "https://github.com/ashishup1999/Neural-Style-Transfer-pytorch-",
+    desc: "I have created a system capable of identifying whether a person is wearing a mask using live camera input. To achieve this, I utilized the facenet-pytorch and MobileNetV3 neural networks to construct the system.",
+  },
 };

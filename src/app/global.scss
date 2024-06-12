@@ -89,6 +89,7 @@ body {
   display: flex;
   justify-content: center;
   flex: 0.85;
+  max-width: 88%;
   height: 100%;
   background-image: url("../../public/LampBG.png");
   background-repeat: no-repeat;
@@ -96,4 +97,5 @@ body {
   background-size: 100% 100%;
   padding: 0 15%;
   padding-top: 25vh;
+  position: relative;
 }
