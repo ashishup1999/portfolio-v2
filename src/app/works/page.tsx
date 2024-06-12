@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "@/app/works/works.scss";
 import Image from "next/image";
 import arrowLeft from "@/assets/arrowLeft.svg";
@@ -9,12 +9,6 @@ import Link from "next/link";
 
 const Works = () => {
   const [wno, setWno] = useState(0);
-
-  useEffect(() => {
-    const { id } = WORKS[Object.keys(WORKS)[wno]];
-    const ele = document.getElementById(id);
-    ele?.scrollIntoView();
-  }, [wno]);
 
   return (
     <>
@@ -29,47 +23,46 @@ const Works = () => {
       )}
       <div id="work-sec">
         <div id="work-view">
-          {Object.keys(WORKS).map((key) => {
-            const { id, name, open, img, ui, server, desc } = WORKS[key];
-            return (
-              <div id={id} key={id} className="work-platform-wrap">
-                <Image src={img} alt="" />
-                <div className="work-platform"></div>
-                <span className="work-head">
-                  <p className="work-title">{name}</p>
-                  {open && (
-                    <Link className="demo" href={open} target="_blank">
-                      Demo
-                    </Link>
-                  )}
-                  {ui && (
-                    <>
-                      <p> | </p>
-                      <Link className="ui-code" href={ui} target="_blank">
-                        Code-FE
-                      </Link>
-                    </>
-                  )}
-                  {server && (
-                    <>
-                      <p> | </p>
-                      <Link
-                        className="server-code"
-                        href={server}
-                        target="_blank"
-                      >
-                        Code-BE
-                      </Link>
-                    </>
-                  )}
-                </span>
-                <p
-                  className="work-desc"
-                  dangerouslySetInnerHTML={{ __html: desc }}
-                ></p>
-              </div>
-            );
-          })}
+          <div id={WORKS[wno]?.id} className="work-platform-wrap">
+            <Image src={WORKS[wno]?.img} alt="" />
+            <div className="work-platform"></div>
+            <span className="work-head">
+              <p className="work-title">{WORKS[wno]?.name}</p>
+              {WORKS[wno]?.open && (
+                <Link className="demo" href={WORKS[wno]?.open} target="_blank">
+                  Demo
+                </Link>
+              )}
+              {WORKS[wno]?.ui && (
+                <>
+                  <p> | </p>
+                  <Link
+                    className="ui-code"
+                    href={WORKS[wno]?.ui}
+                    target="_blank"
+                  >
+                    Code-FE
+                  </Link>
+                </>
+              )}
+              {WORKS[wno]?.server && (
+                <>
+                  <p> | </p>
+                  <Link
+                    className="server-code"
+                    href={WORKS[wno]?.server}
+                    target="_blank"
+                  >
+                    Code-BE
+                  </Link>
+                </>
+              )}
+            </span>
+            <p
+              className="work-desc"
+              dangerouslySetInnerHTML={{ __html: WORKS[wno]?.desc }}
+            ></p>
+          </div>
         </div>
       </div>
       {wno < Object.keys(WORKS)?.length - 1 && (

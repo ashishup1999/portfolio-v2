@@ -84,57 +84,64 @@ export const SKILLS_NAMES: { [key: string]: string } = {
   dj: "Django",
 };
 
-export const WORKS: {
-  [key: string]: {
-    id: string;
-    img: StaticImageData;
-    name: string;
-    open: string;
-    ui?: string;
-    server?: string;
-    desc: string;
-  };
-} = {
-  codekar: {
+export const WORKS = [
+  {
     id: "codekar",
     img: codekarImg,
     name: "<CodeKar>",
     open: "https://codekar-one.vercel.app/",
     ui: "https://github.com/ashishup1999/codekar",
     server: "https://github.com/ashishup1999/codekar-server",
-    desc: "An authentication-based platform enabling users to create mini projects using HTML, CSS, and JavaScript. Provides code-editor playgrounds supporting 5 languages that are Java, Python, Go, C++, and Js. Introducing a unique whiteboard-like code-editor mode devoid of common editor features such as auto-suggestion, auto-completion, and auto-indentation to help users grasp a deeper understanding of language’s features. Facilitates exploration of other user’s playgrounds with the option to connect and collaborate. Used a Go based server as Go can handle as many as 1000 concurrent requests per second, making the app faster",
+    desc: `Developed an authentication-based platform enabling users to create mini projects using HTML, CSS, and
+            JavaScript. Also built a code-editor playgrounds supporting 5 languages that are Java, Python, Go, C++, and Js.
+            <br/><br/> Introduced a unique whiteboard-like code-editor mode devoid of common editor features such as auto-suggestion,
+            auto-completion, and auto-indentation to help users grasp a deeper understanding of language’s features.
+            <br/><br/> Facilitated user exploration of other user’s playgrounds with the option to connect and collaborate.
+            <br/><br/> Used a Go based server as Go can handle as many as 1000 concurrent requests per second, making the app faster.
+            <br/><br/> Tech Stack: NextJs, Golang, MongoDB, Docker`,
   },
-  samvad: {
+  {
     id: "samvad",
     img: samvadImg,
     name: "<Samvad>",
     open: "https://samvad-client-img-latest.onrender.com/",
     ui: "https://github.com/ashishup1999/samvad-client",
     server: "https://github.com/ashishup1999/samvad-server",
-    desc: "Samvad is a web-based, responsive application designed for real-time chatting with friends. This project highlights the effective use of web sockets for seamless real-time communication. The user interface offers a smooth experience, allowing users to easily log in and initiate conversations with their loved ones.",
+    desc: `Led the development of Samvad, a responsive web application tailored for real-time 1-on-1 chatting with friends.
+            Implemented cutting-edge web socket technology to enable seamless real-time communication, resulting in a 30%
+            increase in chat responsiveness.
+            <br/><br/> Engineered an authentication system with a password retrieval mechanism based on OTP, enhancing security and
+            reducing login issues by 25%.
+            <br/><br/> Tech Stack: ReactJs, NodeJs, Web Socket, MongoDB, Docker, Jest
+`,
   },
-  fmd: {
+  {
     id: "fmd",
     img: fdImg,
     name: "<Face Mask Detector>",
     open: "https://github.com/ashishup1999/Face-Mask-Detector-for-COVID-pandemic",
-    desc: "I have created a system capable of identifying whether a person is wearing a mask using live camera input. To achieve this, I utilized the facenet-pytorch and MobileNetV3 neural networks to construct the system.",
+    desc: `I have created a system capable of identifying whether a person is wearing a mask using live camera input. 
+            To achieve this, I utilized the facenet-pytorch and MobileNetV3 neural networks to construct the system.
+            <br/><br/> Tech Stack: Python, Pytorch, NumPy, OpenCV`,
   },
-  nlp: {
+  {
     id: "nlp",
     img: nlpImg,
     name: "<Twitter Sentiment Analysis>",
     open: "https://github.com/ashishup1999/NLP-on-twitter-sentiments",
-    desc: "I developed an algorithm capable of determining whether a sentence expresses support for or opposition to the concept of global warming. The dataset used for this task was collected from tweets posted by various Twitter users discussing the topic of global warming.",
+    desc: `I developed an algorithm capable of determining whether a sentence expresses support for or opposition to the concept of global warming. 
+            The dataset used for this task was collected from tweets posted by various Twitter users discussing the topic of global warming.
+            <br/><br/> Tech Stack: Python, Scikit Learn, NumPy, NLTK`,
   },
-  nst: {
+  {
     id: "nst",
     img: nstImg,
     name: "<Neural Style Transfer>",
     open: "https://github.com/ashishup1999/Neural-Style-Transfer-pytorch-",
-    desc: "I have created a system capable of identifying whether a person is wearing a mask using live camera input. To achieve this, I utilized the facenet-pytorch and MobileNetV3 neural networks to construct the system.",
+    desc: `I have created a system capable of identifying whether a person is wearing a mask using live camera input. To achieve this, I utilized the facenet-pytorch and MobileNetV3 neural networks to construct the system.
+            <br/><br/> Tech Stack: Python, Pytorch, NumPy, OpenCV`,
   },
-};
+];
 
 export const EXPS = [
   {
