@@ -1,0 +1,24 @@
+@import "src/app/globalValues";
+
+#about-sec {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 10px;
+  #full-name {
+    font-size: 56px;
+  }
+  #alias {
+    font-size: 32px;
+  }
+  #my-summary {
+    font-size: 20px;
+  }
+  #coding-chad {
+    margin-top: 20px;
+    img {
+      height: 250px;
+      width: auto;
+    }
+  }
+}
