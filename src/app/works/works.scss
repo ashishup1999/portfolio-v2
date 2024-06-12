@@ -46,7 +46,7 @@
       .work-head {
         display: flex;
         align-items: center;
-        width: 80%;
+        width: 90%;
         margin-top: -15%;
         margin-bottom: 10px;
         p {
@@ -62,7 +62,8 @@
         }
       }
       .work-desc {
-        width: 80%;
+        text-align: justify;
+        width: 90%;
         font-size: 20px;
       }
     }
@@ -77,10 +78,44 @@
 
 #left-arrow {
   top: 50%;
-  left: 25%;
+  left: 5%;
 }
 
 #right-arrow {
   top: 50%;
-  right: 25%;
+  right: 5%;
+}
+
+@media only screen and (max-width: 750px) {
+  #work-sec {
+    width: 100%;
+    position: relative;
+  }
+  .work-platform-wrap {
+    margin: 0 !important;
+    .work-platform {
+      width: 80% !important;
+    }
+    img {
+      width: 55% !important;
+    }
+  }
+
+  .work-desc {
+    max-width: 50vh;
+    overflow-y: scroll;
+  }
+
+  .work-head > .work-title{
+    font-size: 24px !important;
+  }
+
+  .work-head > a, .work-desc{
+    font-size: 16px !important;
+  }
+
+  .arrows {
+    top: 13% !important;
+    height: 20px;
+  }
 }

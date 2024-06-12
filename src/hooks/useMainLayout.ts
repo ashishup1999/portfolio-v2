@@ -11,6 +11,16 @@ const useMainLayout = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    document.addEventListener("click", (e: any) => {
+      if (e?.target?.id !== "menu-logo") {
+        const ele = document.getElementById("right-pannel");
+        if (ele) ele.style.zIndex = "-1";
+      }
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const onClick = (e: any) => {
     const list = document.querySelectorAll("#menu>li");
     list.forEach((ele: Element) => {
@@ -19,7 +29,17 @@ const useMainLayout = () => {
     const ele = document.getElementById(e?.currentTarget?.id);
     ele?.classList.add("checked");
   };
-  return { onClick };
+
+  const onMenuClick = (e: any) => {
+    e.stopPropagation();
+    const ele = document.getElementById("right-pannel");
+    if (ele) {
+      if (Number(ele?.style?.zIndex) <= 0) ele.style.zIndex = "2";
+      else ele.style.zIndex = "-1";
+    }
+  };
+
+  return { pathName, onClick, onMenuClick };
 };
 
 export default useMainLayout;

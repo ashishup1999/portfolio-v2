@@ -63,6 +63,7 @@
         }
       }
       .experience-desc {
+        text-align: justify;
         width: 90%;
         font-size: 20px;
       }
@@ -78,10 +79,45 @@
 
 #left-arrow {
   top: 50%;
-  left: 25%;
+  left: 5%;
 }
 
 #right-arrow {
   top: 50%;
-  right: 25%;
+  right: 5%;
+}
+
+@media only screen and (max-width: 750px){
+  #experience-sec {
+    width: 100%;
+    position: relative;
+  }
+  .experience-platform-wrap {
+    margin: 0 !important;
+    .experience-platform {
+      width: 80% !important;
+    }
+    img {
+      width: 55% !important;
+      top: 9% !important;
+    }
+  }
+
+  .experience-desc {
+    max-width: 50vh;
+    overflow-y: scroll;
+  }
+
+  .experience-head > .experience-title{
+    font-size: 24px !important;
+  }
+
+  .experience-head > a, .experience-desc{
+    font-size: 16px !important;
+  }
+
+  .arrows {
+    top: 13% !important;
+    height: 20px;
+  }
 }

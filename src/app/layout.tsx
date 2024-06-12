@@ -6,12 +6,11 @@ import arrowDown from "@/assets/arrowDown.svg";
 import lnkdin from "@/assets/lnkdin.svg";
 import github from "@/assets/github.svg";
 import twitter from "@/assets/twitter.svg";
+import menu from "@/assets/menu.svg";
 import Image from "next/image";
 import Link from "next/link";
 import useMainLayout from "@/hooks/useMainLayout";
-import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
 const goldman = Goldman({ weight: "400", subsets: ["latin"] });
 const iceland = Iceland({ weight: "400", subsets: ["latin"] });
 
@@ -20,7 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { onClick } = useMainLayout();
+  const { pathName, onClick, onMenuClick } = useMainLayout();
   return (
     <html lang="en">
       <head>
@@ -50,7 +49,13 @@ export default function RootLayout({
                 <Link href="/contact">Contact</Link>
               </li>
               <li id="resume">
-                Resume <Image src={arrowDown} alt="arrowDown" />
+                <a
+                  href="https://drive.google.com/file/d/1dMK53acjkZ7j6kyzrHR0vvb6TKVNwbiN/view?usp=sharing"
+                  download="Ashish_Resume"
+                  target="_blank"
+                >
+                  Resume <Image src={arrowDown} alt="arrowDown" />
+                </a>
               </li>
             </ul>
             <ul id="socials">
@@ -74,7 +79,19 @@ export default function RootLayout({
               </li>
             </ul>
           </div>
-          <div id="content-pannel">{children}</div>
+          <div id="content-pannel">
+            <div className="mobile-header">
+              <Image id="logo" src={logo} alt="logo" />
+              <p id="section">{pathName.toUpperCase()}</p>
+              <Image
+                id="menu-logo"
+                src={menu}
+                alt="menu"
+                onClick={onMenuClick}
+              />
+            </div>
+            {children}
+          </div>
         </main>
       </body>
     </html>
