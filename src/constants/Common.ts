@@ -24,6 +24,9 @@ import samvadImg from "@/assets/work-images/samvad.png";
 import fdImg from "@/assets/work-images/fm.png";
 import nlpImg from "@/assets/work-images/nlp.png";
 import nstImg from "@/assets/work-images/nst.png";
+import idfcLogo from "@/assets/exps/idfc.png";
+import persiLogo from "@/assets/exps/persi.png";
+import iiitdmLogo from "@/assets/exps/iiitdm.png";
 import { StaticImageData } from "next/image";
 
 export const ABOUT = {
@@ -132,3 +135,48 @@ export const WORKS: {
     desc: "I have created a system capable of identifying whether a person is wearing a mask using live camera input. To achieve this, I utilized the facenet-pytorch and MobileNetV3 neural networks to construct the system.",
   },
 };
+
+export const EXPS = [
+  {
+    id: "idfc2",
+    img: idfcLogo,
+    name: "<Software Developer>",
+    extra: "IDFC First Bank | May 2023 - present",
+    desc: `Led the digitization of the bank's NRI Savings Account onboarding, transitioning from manual to fully digital
+            processes with a streamlined UI, resulting in an 80% reduction in account opening time.<br/><br/>
+            Implemented automated data retrieval and seamless document upload to AWS, with automatic rollback in case of
+            failures. Resulted in a 200% increase in the bank's NRI user base.<br/><br/>
+            Orchestrated the successful integration of a video-driven identity verification process for NRI account openings,
+            resulting in a 20% reduction in account setup timelines and improved operational efficiency.<br/><br/>
+            Optimized the other existing account opening journeys codebase, resulting in a 10% increase in platform’s
+            performance.`,
+  },
+  {
+    id: "idfc1",
+    img: idfcLogo,
+    name: "<Application Engineer>",
+    extra: "IDFC First Bank | Jul 2022 - May - 2023",
+    desc: `Developed a Go-based communication platform to streamline message delivery from banks to users across
+            multiple channels such as SMS, email, and WhatsApp. Achieved an 8% improvement in system throughput.<br/><br/>
+            Programmed robust communication systems across multiple channels, significantly increasing message delivery
+            efficiency. Resulted in a 2x rise in the bank-wide customer base.`,
+  },
+  {
+    id: "persi",
+    img: persiLogo,
+    name: "<SDE Intern>",
+    extra: "Persistent Systems | Jan 2022 - May 2022",
+    desc: `Designed an application using ReactJs within an Agile development methodology, resulting in a notable 15%
+            improvement in overall performance and usability.
+            <br/><br/> The approach not only improved team collaboration but also led to a reduction in the Development Life Cycle time
+            by 50%.
+`,
+  },
+  {
+    id: "iiitdm",
+    img: iiitdmLogo,
+    name: "<Machine Learning Intern>",
+    extra: "IIITDM Jabalpur | June 2021 - Oct 2021",
+    desc: "I created a system capable of identifying and rectifying incorrect verb forms within sentences based on grammar rules. Additionally, I authored a research paper on this specific topic.",
+  },
+];

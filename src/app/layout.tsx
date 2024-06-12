@@ -44,7 +44,7 @@ export default function RootLayout({
                 <Link href="/works">Works</Link>
               </li>
               <li id="experience" onClick={onClick}>
-                <Link href="/experience">Experiene</Link>
+                <Link href="/experience">Experience</Link>
               </li>
               <li id="contact" onClick={onClick}>
                 <Link href="/contact">Contact</Link>
