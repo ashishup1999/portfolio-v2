@@ -34,7 +34,7 @@ const useMainLayout = () => {
     e.stopPropagation();
     const ele = document.getElementById("right-pannel");
     if (ele) {
-      if (Number(ele?.style?.zIndex) <= 0) ele.style.zIndex = "2";
+      if (Number(ele?.style?.zIndex) <= 0) ele.style.zIndex = "3";
       else ele.style.zIndex = "0";
     }
   };
