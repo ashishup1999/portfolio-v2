@@ -9,7 +9,7 @@ const useMainLayout = () => {
       onClick({ currentTarget: { id: pathName } });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [pathName]);
 
   useEffect(() => {
     document.addEventListener("click", (e: any) => {
