@@ -50,7 +50,7 @@ export default function RootLayout({
               </li>
               <li id="resume">
                 <a
-                  href="https://drive.google.com/file/d/1dMK53acjkZ7j6kyzrHR0vvb6TKVNwbiN/view?usp=sharing"
+                  href="https://docs.google.com/document/d/1jh3wPdsQRGrG_QiVwPvijWT8R7BNGCIm/edit?usp=sharing&ouid=112454956979602675957&rtpof=true&sd=true"
                   download="Ashish_Resume"
                   target="_blank"
                 >
